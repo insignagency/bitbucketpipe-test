@@ -31,5 +31,5 @@ RUN curl -o /tmp/composer-setup.php https://getcomposer.org/installer \
     && php /tmp/composer-setup.php --no-ansi --install-dir=/usr/local/bin --filename=composer --snapshot \
     && rm -f /tmp/composer-setup.*
 
-COPY pipe /
+COPY pipe.sh /
 ENTRYPOINT ["/pipe.sh"]
